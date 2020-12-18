@@ -5,5 +5,10 @@
  * @returns {object} - returns the new object
  */
 export const pick = (obj, ...fields) => {
-
+  return Object.fromEntries(
+    // преобразовать в массив, затем map, затем fromEntries обратно в объект
+    Object.entries(obj).filter(item => fields.includes(item[0]))
+  );
 };
+
+
