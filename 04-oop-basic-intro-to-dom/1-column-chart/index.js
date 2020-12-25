@@ -9,6 +9,7 @@ export default class ColumnChart {
   }
 
   render() {
+    
     const isLoad = this.data.length === 0;
     const element = document.createElement("div");
     const max = Math.max(...this.data);
